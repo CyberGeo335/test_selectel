@@ -1,0 +1,19 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>History</title> 
+</head> 
+<body> 
+    <h1>Upload History</h1> 
+    <ul> 
+    {% for upload in uploads %} 
+        <li>{{ upload.img_name }} - {{ upload.tag }} - {{ upload.root }} - {{ upload.label }} - {{ upload.comment }}</li> 
+    {% endfor %} 
+    </ul> 
+    <form action="/clear_history" method="post"> 
+        <input type="submit" value="Clear History"> 
+    </form> 
+    <a href="/">Back to Upload</a> 
+</body> 
+</html>

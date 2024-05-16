@@ -1,0 +1,22 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>Upload Image</title> 
+</head> 
+<body> 
+    <h1>Upload Image</h1> 
+    <form action="/upload" method="post" enctype="multipart/form-data"> 
+        <input type="file" name="file" required><br> 
+        <label for="label">Choose a folder:</label><br> 
+        <select name="label" id="label" required> 
+            <option value="олени">олени</option> 
+            <option value="кабарга">кабарга</option> 
+            <option value="косуля">косуля</option> 
+        </select><br> 
+        <textarea name="comment" placeholder="Comment"></textarea><br> 
+        <input type="submit" value="Upload"> 
+    </form> 
+    <a href="/history">View Upload History</a> 
+</body> 
+</html>
